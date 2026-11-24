@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrestle Live Rankings · Ohio wrestling</title>
+<meta name="description" content="Ohio wrestling ratings, rankings, career histories and state bracket odds, built from tournament results. High school and middle school, boys and girls, plus youth results from events run on wrestle.live.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wrestle Live Rankings · Ohio wrestling">
+<meta property="og:description" content="Ohio wrestling ratings, rankings, career histories and state bracket odds, built from tournament results. High school and middle school, boys and girls, plus youth results from events run on wrestle.live.">
+<meta name="theme-color" content="#0A1020">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta property="og:site_name" content="Wrestle Live Rankings">
+<meta property="og:image" content="https://rankings.wrestle.live/icons/share.png?v=2">
+<meta property="og:image:alt" content="wrestle.live Rankings: Every wrestler. Every season. Ranked.">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rankings.wrestle.live/icons/share.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" href="/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/barlow-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/app.css?v=3ba5b4d1a8">
+</head>
+<body>
+
+<a class="skip" href="#" id="skip">Skip to content</a>
+<header class="mast"><div class="mast-in">
+  <a class="brand" href="#home"><span class="bw">wrestle<span>.live</span></span> <small>RANKINGS</small><span class="sr"> home</span></a>
+  <nav class="tabs" aria-label="Views">
+    <a href="#home" data-view="home">Home</a>
+    <a href="#rankings" data-view="rankings">Rankings</a>
+    <a href="#teams" data-view="teams">Teams</a>
+    <a href="#events" data-view="events">Events</a>
+    <a href="#matchups" data-view="sim">Matchups</a>
+    <a href="#odds" data-view="odds" id="tab-odds">State odds</a>
+  </nav>
+  <form class="hsearch" role="search" id="hsearch"><label for="hq" class="sr">Search wrestlers, schools and events</label><input id="hq" type="search" placeholder="Search wrestlers, schools" autocomplete="off" aria-controls="hq-list"><div class="suggest" id="hq-list" hidden></div></form>
+  <a class="sister" href="https://wrestle.live/" target="_blank" rel="noopener">wrestle.live<span aria-hidden="true"> ↗</span><span class="sr"> tournament hosting (opens in a new tab)</span></a>
+  <a class="msearch" href="#search" aria-label="Search"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><span class="lbl">Search</span></a>
+</div></header>
+<nav class="bottombar" aria-label="Phone menu">
+  <a href="#home" data-view="home"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"></path></svg>Home</a>
+  <a href="#rankings" data-view="rankings"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>Rankings</a>
+  <a href="#odds" data-view="odds" id="bb-odds"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h5v4H3zM3 15h5v4H3zM8 7h4v10H8M12 12h5M17 10h4v4h-4z"></path></svg>State odds</a>
+  <a href="#teams" data-view="teams"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg>Teams</a>
+  <a href="#matchups" data-view="sim" id="bb-sim"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-4-4"/><path d="M20 16H6l4 4"/></svg>Matchups</a>
+  <button type="button" id="morebtn" aria-expanded="false" aria-controls="moresheet"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.5"></circle><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle></svg>More</button>
+</nav>
+<div class="moresheet" id="moresheet" hidden>
+  <a href="#events">Events</a><a href="#matchups" id="more-sim">Matchups</a><a href="#odds" id="more-odds">State odds</a><a href="#leaders">Stat leaders</a><a href="#accuracy">How accurate is it?</a><a href="#search">Search</a><a class="ext" href="https://wrestle.live/" target="_blank" rel="noopener">Host a tournament on wrestle.live<span aria-hidden="true"> ↗</span><span class="sr"> (opens in a new tab)</span></a>
+</div>
+
+<main>
+  <p id="live" class="sr" role="status" aria-live="polite"></p>
+  <p id="loading" class="lede" role="status">Loading Ohio results…</p>
+
+  <!-- HOME -->
+  <section id="v-home" hidden>
+    <div class="hero-home">
+      <div class="hero-bg" aria-hidden="true"><span class="mat m1"></span><span class="mat m2"></span><span class="mat m3"></span></div>
+      <div>
+        <p class="eyebrow" id="h-eye">Now covering Ohio · high school and middle school · boys and girls</p>
+        <h1 tabindex="-1">Rankings built <br><span class="hl-gold">from real results.</span></h1>
+        <p class="lede" id="h-lede">Ratings, P4P Scores, career histories and state bracket odds from tournament results. Updated through the season.</p>
+      </div>
+      <form class="searchcard" role="search" id="h-form">
+        <label for="h-q">Find a wrestler, school or event</label>
+        <div class="row"><input id="h-q" type="search" placeholder="e.g. a name or a school" autocomplete="off" aria-controls="h-q-list"><button type="submit" class="btn primary">Search</button></div>
+        <div class="suggest" id="h-q-list" hidden></div>
+        <div class="quick" id="h-quick"><a href="#rankings/pre" id="q-pre" hidden>Preseason rankings</a><a href="#rankings/MS">Middle school rankings</a><a href="#matchups/d">Simulate a dual</a><a href="#matchups/w">Compare two wrestlers</a><a href="#rankings/movers" id="q-movers" hidden>This week's biggest movers</a><a href="#odds" id="q-odds" hidden>State bracket odds</a></div>
+      </form>
+    </div>
+    <div class="strip" id="h-strip" aria-label="By the numbers"></div>
+    <section class="sect" aria-labelledby="h-ones">
+      <div class="secthead"><div><h2 id="h-ones">No. 1 at every weight</h2><p class="sub" id="h-ones-sub" style="margin:2px 0 0;font-size:14px"></p></div><div class="sh-right"><a class="lnk" id="h-ones-all" href="#rankings">Full rankings</a><div class="seg" role="group" aria-label="Gender" id="h-g"></div></div></div>
+      <div class="ones" id="h-onesgrid" data-nosnippet></div>
+    </section>
+    <section class="sect" aria-labelledby="h-fol" id="h-folsec"><h2 id="h-fol">Following</h2><div id="h-folbody" data-nosnippet></div></section>
+    <section class="sect" aria-labelledby="h-wk" id="h-wksec" hidden data-nosnippet><div class="secthead"><div><h2 id="h-wk">This week</h2><p class="sub" id="h-wk-sub" style="margin:2px 0 0;font-size:14px"></p></div><div class="sh-right"><a class="lnk" href="#leaders">Stat leaders</a></div></div><div class="wk" id="h-wkbody"></div></section>
+    <section class="sect" aria-labelledby="h-lead"><h2 id="h-lead">Pound-for-pound and team leaders</h2><div class="leaders" id="h-leaders" data-nosnippet></div></section>
+    <section class="sect" aria-labelledby="h-how"><h2 id="h-how">How to read the numbers</h2><div class="explain" id="h-explain"></div></section>
+  </section>
+
+  <!-- RANKINGS -->
+  <section id="v-rankings" hidden>
+    <p class="eyebrow" id="r-eyebrow">Ohio high school · statewide</p>
+    <h1 tabindex="-1">Rankings</h1>
+    <p class="lede" id="r-lede"><strong>Rating</strong> is how strong a wrestler is right now, built from every bout we have; the ± is how sure it is. <strong>P4P Score</strong> puts every weight on one scale: 500 is a typical state qualifier, 1,000 a typical state champion.</p>
+    <div class="viewtabs" role="group" aria-label="Rankings view" id="r-views"></div>
+    <details class="about"><summary>How rankings work</summary>
+      <p>Ratings use Glicko-2: every bout moves both wrestlers, and a pin moves them more than a decision. The ± shows how sure the rating is. To be ranked a wrestler needs an Ohio team and 6 rated bouts in the season (4 for weekly rankings). Early in the season, until December 15, the weekly list also shows returning wrestlers after 1 bout and new wrestlers after 3, marked provisional, so there is a current list from the first weekend. Ratings compare wrestlers within a season; P4P Scores compare across weights and seasons. Records count only bouts in the database. <a href="#accuracy">How accurate are the ratings?</a></p>
+    </details>
+    <div class="filters toolbar">
+      <div class="field"><label for="r-season">Season</label><select id="r-season"></select></div>
+      <div class="field"><label for="r-asof">As of</label><select id="r-asof"></select></div>
+      <div class="seg" role="group" aria-label="Gender" id="r-gender"></div>
+      <div class="seg" role="group" aria-label="Division" id="r-div"></div>
+      <div class="seg" role="group" aria-label="Grade" id="r-grade"></div>
+    </div>
+    <p class="note" id="r-gnote" hidden>Grade comes from the OHSAA state pairings, middle school records and full four-season careers, so it is known for about half of ranked wrestlers. Wrestlers without a known grade are left out when a grade is picked.</p>
+    <div class="pills" role="group" aria-label="Weight class" id="r-weights"></div>
+    <div class="podium" id="r-podium" aria-label="Top three"></div>
+    <p class="note" id="r-prenote" hidden></p>
+    <p class="note prov-note" id="r-provnote" hidden><span class="chip prov">Provisional</span> Early in the season (until December 15) a returning wrestler is listed after 1 bout and a new wrestler after 3, so there is a current list from the first weekend. Ranks firm up once a wrestler has 4 bouts.</p>
+    <div class="card">
+      <div class="card-head"><h2 id="r-title"></h2><span class="sub" id="r-count"></span></div>
+      <table><thead id="r-head"></thead><tbody id="r-body"></tbody></table>
+      <div class="more"><button type="button" id="r-more">Show all</button></div>
+    </div>
+    <div class="card" id="r-movers" hidden style="margin-top:16px"></div>
+  </section>
+
+  <!-- STATE ODDS -->
+  <section id="v-odds" hidden>
+    <p class="eyebrow">OHSAA state tournament</p>
+    <h1 tabindex="-1">State bracket odds</h1>
+    <p class="lede">We simulated each state bracket 20,000 times, using only what was known before the tournament, then compared the odds with what actually happened.</p>
+    <ol class="howstate" aria-label="How the state tournament works">
+      <li><strong>16 make state</strong><span>at each weight, after sectionals and districts</span></li>
+      <li><strong>Win 4 straight</strong><span>to become state champion</span></li>
+      <li><strong>Lose once</strong><span>and you can still wrestle back for 3rd to 8th. Lose twice and you're out.</span></li>
+      <li><strong>Top 8 medal</strong><span>and stand on the podium</span></li>
+    </ol>
+    <details class="about"><summary>How the odds work</summary>
+      <p>Brackets use the real draw (bracket spots 1 to 16 from the OHSAA pairings). Each bout's chance comes from the blend: the wrestler's rating plus their official season record, district finish, grade and last year's state finish, weighted by what predicted state bouts best in earlier seasons, with recent seasons counting most. The more of both wrestlers' bouts we have, the more the rating counts. Title odds follow the bracket exactly; placing odds approximate the consolation crossings. <span id="o-about"></span></p>
+    </details>
+    <div class="filters">
+      <div class="field"><label for="o-season">Season</label><select id="o-season"></select></div>
+      <div class="seg" role="group" aria-label="Division" id="o-div"></div>
+      <div class="seg" role="group" aria-label="View" id="o-view"></div>
+    </div>
+    <div class="pills" role="group" aria-label="Weight class" id="o-weights"></div>
+    <div class="sumcards" id="o-cards"></div>
+    <p class="note bracketnote" id="o-bnote">Each box is one group of four bracket spots: two first-round bouts, whose winners meet in the quarterfinal for one semifinal spot. Each half of the bracket sends one wrestler to the final.</p>
+    <div id="o-quarters"></div>
+    <div class="card" id="o-tablecard">
+      <div class="card-head"><h2 id="o-title"></h2><span class="sub" id="o-sum"></span></div>
+      <table>
+        <thead><tr><th class="num lg">Spot</th><th>Wrestler</th><th class="lg">School</th><th class="num lg">Rating</th><th class="num">Win state</th><th class="num lg">Top 3</th><th class="num">Medal <span class="lg">(top 8)</span></th><th class="num lg">Expected finish</th><th>Actual finish</th></tr></thead>
+        <tbody id="o-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- TEAMS LIST -->
+  <section id="v-teams" hidden>
+    <p class="eyebrow">Ohio programs</p>
+    <h1 tabindex="-1">Team rankings</h1>
+    <p class="lede">Lineup strength adds each team's best P4P Score at every weight, so it rewards depth, not one star.</p>
+    <div class="filters">
+      <div class="field"><label for="t-season">Season</label><select id="t-season"></select></div>
+      <div class="seg" role="group" aria-label="Gender" id="t-gender"></div>
+      <div class="seg" role="group" aria-label="Division" id="t-div"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h2 id="t-title"></h2><span class="sub" id="t-count"></span></div>
+      <table>
+        <thead><tr><th>Rank</th><th>Team</th><th class="lg">Div</th><th class="num">Strength</th><th class="num lg">Weights filled</th><th class="num lg">Ranked</th><th class="num lg">State qualifiers</th><th class="num lg">Placers</th><th class="num lg">Champions</th></tr></thead>
+        <tbody id="t-body"></tbody>
+      </table>
+      <div class="more"><button type="button" id="t-more">Show all</button></div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="v-team" hidden>
+    <div class="whero">
+      <div class="stripe" id="tm-bar" aria-hidden="true" hidden></div>
+      <span class="mono" id="tm-mono" aria-hidden="true"></span>
+      <div style="flex:1 1 380px;min-width:0">
+        <p class="eyebrow" id="tm-eyebrow"></p>
+        <h1 id="tm-name" tabindex="-1"></h1>
+        <div class="schoolid" id="tm-school" hidden></div>
+      </div>
+    </div>
+    <div class="viewtabs" role="group" aria-label="Team view" id="tm-views"></div>
+    <div class="filters">
+      <div class="field" id="tm-season-f"><label for="tm-season">Season</label><select id="tm-season"></select></div>
+      <div class="seg" role="group" aria-label="Level" id="tm-level" hidden></div>
+      <div class="seg" role="group" aria-label="Program" id="tm-gender"></div>
+      <a class="btn ghost" id="tm-sim" href="#matchups/d">Simulate a dual</a>
+      <button type="button" class="btn ghost follow" id="tm-follow" aria-pressed="false">Follow</button>
+    </div>
+    <div id="tm-hist" hidden>
+      <div class="tiles" id="tm-htiles"></div>
+      <div class="grid2">
+        <div class="card">
+          <div class="card-head"><h2>Best at every weight</h2><span class="sub">Best single season at each weight</span></div>
+          <table>
+            <thead><tr><th class="num">Weight</th><th>Wrestler</th><th class="num lg">Season</th><th class="num">P4P</th><th class="lg">State</th></tr></thead>
+            <tbody id="tm-hbest"></tbody>
+          </table>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2>Top 10 seasons</h2><span class="sub">All weights, ranked by P4P Score</span></div>
+          <table>
+            <thead><tr><th class="num">#</th><th>Wrestler</th><th class="num">Weight</th><th class="num lg">Season</th><th class="num">P4P</th><th class="lg">State</th></tr></thead>
+            <tbody id="tm-htop"></tbody>
+          </table>
+        </div>
+      </div>
+      <p class="note" style="margin-top:14px">History covers 2010-11 to today, from the results in our database; earlier seasons are mostly postseason results. P4P Score compares each season with that year's state field, so seasons from different years rank fairly. Older weight classes count toward the nearest current one (145 counts at 144).</p>
+    </div>
+    <div id="tm-seasonview">
+    <div class="tiles" id="tm-tiles"></div>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-head"><h2>Lineup</h2><span class="sub" id="tm-lu-sub">Best ranked wrestler at each weight</span></div>
+        <table>
+          <thead><tr><th class="num">Wt</th><th>Wrestler</th><th class="num lg">Record</th><th class="num lg">Rating</th><th class="num">Rank</th><th class="num">P4P</th><th class="lg">State</th></tr></thead>
+          <tbody id="tm-lineup"></tbody>
+        </table>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Events</h2><span class="sub">Team record in bouts we have</span></div>
+        <div id="tm-events"><p class="loading">Loading events…</p></div>
+      </div>
+    </div>
+    <div class="card" id="tm-roster-card" style="margin-top:16px">
+      <div class="card-head"><h2 id="tm-roster-h">Full roster</h2><span class="sub" id="tm-roster-sub">Everyone with a bout for this team in our results</span></div>
+      <table>
+        <thead><tr><th class="num">Wt</th><th>Wrestler</th><th class="num lg">Grade</th><th class="num">Record</th><th class="num lg">Pins</th><th class="num lg">Rating</th><th class="num">Rank</th></tr></thead>
+        <tbody id="tm-roster"><tr><td colspan="7" class="loading">Loading roster…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="card" id="tm-moved" hidden style="margin-top:16px">
+      <div class="card-head"><h2 id="tm-moved-h">Changed schools during the season</h2><span class="sub">Wrestled for this team for part of the season</span></div>
+      <table>
+        <thead><tr><th>Wrestler</th><th>Move</th><th class="num">Bouts here</th><th class="lg">Here</th></tr></thead>
+        <tbody id="tm-moved-body"></tbody>
+      </table>
+    </div>
+    </div>
+  </section>
+
+  <!-- EVENTS LIST -->
+  <section id="v-events" hidden>
+    <p class="eyebrow">Results in the database</p>
+    <h1 tabindex="-1">Events</h1>
+    <div class="card" id="e-wl" hidden></div>
+    <div class="filters toolbar">
+      <div class="field"><label for="e-season">Season</label><select id="e-season"></select></div>
+      <div class="seg" role="group" aria-label="Level" id="e-level"></div>
+      <div class="seg" role="group" aria-label="Event type" id="e-type"></div>
+      <div class="seg" role="group" aria-label="Gender" id="e-gender"></div>
+    </div>
+    <div class="filters e-find">
+      <div class="field grow"><label for="e-q">Search</label><input type="search" id="e-q" placeholder="Event, host school, town or county" autocomplete="off"></div>
+      <div class="field"><label for="e-near">Near</label><input type="search" id="e-near" list="e-towns" placeholder="Town or ZIP" autocomplete="off" style="width:160px"><datalist id="e-towns"></datalist></div>
+      <div class="field"><label for="e-radius">Within</label><select id="e-radius"><option value="15">15 miles</option><option value="30" selected>30 miles</option><option value="60">60 miles</option></select></div>
+      <p class="sub e-nearmsg" id="e-nearmsg" role="status" aria-live="polite"></p>
+    </div>
+    <div class="card">
+      <div class="card-head"><h2 id="e-title"></h2><span class="sub" id="e-count"></span></div>
+      <table>
+        <thead><tr><th>Event</th><th class="lg">Where</th><th class="lg">Type</th><th class="num">Bouts</th></tr></thead>
+        <tbody id="e-body"></tbody>
+      </table>
+    </div>
+    <div class="card hostcard">
+      <div><h2>Running an event?</h2><p>Host it on wrestle.live: brackets, live results and registration in one place.</p></div>
+      <a class="btn" href="https://wrestle.live/" target="_blank" rel="noopener">Host on wrestle.live<span aria-hidden="true"> ↗</span><span class="sr"> (opens in a new tab)</span></a>
+    </div>
+  </section>
+
+  <!-- EVENT -->
+  <section id="v-event" hidden>
+    <div id="ev-head">
+      <div class="evb-top">
+        <span class="evb-logo" id="ev-mono" aria-hidden="true" hidden></span>
+        <div class="hmain">
+          <div class="evb-chips" id="ev-chips" hidden></div>
+          <p class="eyebrow" id="ev-eyebrow"></p>
+          <h1 id="ev-name" tabindex="-1"></h1>
+          <p class="lede" id="ev-sub"></p>
+          <p class="ev-where" id="ev-where" hidden></p>
+        </div>
+        <div class="evb-acts" id="ev-acts" hidden></div>
+      </div>
+      <nav class="ev-years" id="ev-years" aria-label="This event in other years" hidden></nav>
+      <div class="evb-stats" id="ev-stats" hidden></div>
+    </div>
+    <div class="pills" role="group" aria-label="Weight class" id="ev-weights" style="margin-top:18px"></div>
+    <div class="grid2" id="ev-grid">
+      <div class="ev-col">
+      <div class="card">
+        <div class="card-head"><h2 id="ev-ptitle">Placers</h2></div>
+        <div id="ev-placers"></div>
+      </div>
+      <div class="card" id="ev-hist" hidden>
+      <div class="card-head"><h2 id="ev-htitle">Past champions</h2><span class="sub" id="ev-hsub"></span></div>
+      <table><thead><tr><th>Season</th><th>Champion</th><th class="lg">School</th></tr></thead><tbody id="ev-hbody"></tbody></table>
+    </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2 id="ev-btitle">Bouts</h2><span class="sub" id="ev-bcount"></span></div>
+        <div id="ev-bouts"><p class="loading">Loading bouts…</p></div>
+      </div>
+    </div>
+    <section class="evb-built" id="ev-built" aria-label="About this page" hidden></section>
+  </section>
+
+  <!-- WRESTLER -->
+  <section id="v-wrestler" hidden>
+    <div class="whero">
+      <span class="mono" id="w-mono" aria-hidden="true"></span>
+      <div style="flex:1 1 380px;min-width:0">
+        <p class="eyebrow" id="w-eyebrow">Wrestler</p>
+        <h1 id="w-name" tabindex="-1"></h1>
+        <p class="lede" id="w-sub"></p>
+        <div class="badges" id="w-badges"></div>
+      </div>
+      <div class="acts"><a class="btn" href="#matchups/w" id="w-compare">Compare</a><button type="button" class="btn ghost follow" id="w-follow" aria-pressed="false">Follow</button><button type="button" class="btn ghost" id="w-share">Share</button></div>
+    </div>
+    <div class="tiles" id="w-tiles"></div>
+    <div id="w-sosbar"></div>
+    <div class="grid2 wgrid">
+      <div class="card">
+        <div class="card-head"><h2>P4P Score by season</h2><span class="sub">500 typical qualifier · 1000 typical champion</span></div>
+        <div class="chart" id="w-chart"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Seasons</h2></div>
+        <table>
+          <thead><tr><th>Season and school</th><th class="num">Wt</th><th class="num">Record</th><th class="num lg">Rating</th><th class="num lg">Rank</th><th class="num">P4P</th><th>State</th></tr></thead>
+          <tbody id="w-body"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card sos" style="margin-top:16px" id="w-mcard">
+      <h2 class="sr">Matches and strength of schedule</h2>
+      <div class="card-head wtabs"><div class="viewtabs" role="group" aria-label="Match view" id="w-mviews"></div><select id="w-mseason" aria-label="Season"></select></div>
+      <div id="w-matches"><p class="loading">Loading matches…</p></div>
+      <div id="w-sos" hidden><p class="sub sosnote">Opponents judged by their end-of-season rating. "Tougher than" compares the average with other Ohio wrestlers' schedules that season (10+ rated opponents needed). Ohio high school bouts only; forfeits left out.</p><div id="w-sosbody"><p class="loading">Working out schedule strength…</p></div></div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+
+  <!-- SIMULATOR -->
+  <section id="v-sim" hidden>
+    <p class="eyebrow">Who wins?</p>
+    <h1 tabindex="-1">Matchups</h1>
+    <p class="lede" id="sim-lede">Compare two wrestlers, play out a dual meet, or simulate a tournament, all from every wrestler's rating.</p>
+    <div class="viewtabs" role="group" aria-label="Matchup type" id="sim-mode"></div>
+    <div class="filters">
+
+      <div class="field"><label for="sim-season">Season</label><select id="sim-season"></select></div>
+      <div class="seg" role="group" aria-label="Boys or girls" id="sim-g"></div>
+    </div>
+    <p class="note sim-projnote" id="sim-proj" hidden></p>
+    <div id="sim-wr" hidden>
+    <div class="vs" style="margin-top:18px">
+      <div class="picker"><label for="c-a">Wrestler A</label><input type="search" id="c-a" placeholder="Name or school" autocomplete="off"><div class="results" id="c-ar" hidden></div></div>
+      <div class="vsx" style="font-family:var(--display);font-weight:700;font-size:22px;color:var(--muted);padding-bottom:8px">VS</div>
+      <div class="picker"><label for="c-b">Wrestler B</label><input type="search" id="c-b" placeholder="Name or school" autocomplete="off"><div class="results" id="c-br" hidden></div></div>
+    </div>
+    <div id="c-out"></div>
+    </div>
+    <div id="sim-dual">
+      <div class="vs">
+        <div class="picker"><label for="sim-a">Team A</label><input type="search" id="sim-a" placeholder="School name" autocomplete="off"><div class="results" id="sim-ar" hidden></div></div>
+        <div class="vsx" style="font-family:var(--display);font-weight:700;font-size:22px;color:var(--muted);padding-bottom:8px">VS</div>
+        <div class="picker"><label for="sim-b">Team B</label><input type="search" id="sim-b" placeholder="School name" autocomplete="off"><div class="results" id="sim-br" hidden></div></div>
+      </div>
+      <div id="sim-dout"></div>
+    </div>
+    <div id="sim-tourn" hidden>
+      <div class="sim-add">
+        <div class="picker"><label for="sim-t">Add a team</label><input type="search" id="sim-t" placeholder="School name" autocomplete="off"><div class="results" id="sim-tr" hidden></div></div>
+        <div class="picker sim-evpick"><label for="sim-ev" id="sim-evl">Or load the teams from a real event</label>
+          <input type="search" id="sim-ev" placeholder="Search events, or click to browse" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sim-evr" aria-autocomplete="list">
+          <div class="results" id="sim-evr" role="listbox" aria-labelledby="sim-evl" hidden></div></div>
+        <div class="field"><label for="sim-places">Places</label><select id="sim-places"><option value="6">6</option><option value="8" selected>8</option></select></div>
+      </div>
+      <div class="chips" id="sim-chips"></div>
+      <div id="sim-tout"></div>
+    </div>
+    <p class="note" id="sim-how">How it works: each bout's odds come from the two wrestlers' latest ratings for the season, and the way a win comes (fall, tech fall, major, decision) follows how bouts with the same odds have gone in our results. Lineups start with each team's highest-rated wrestler at his or her usual weight; change any spot. Duals are worked out exactly over every possible result of every bout, so the same lineups always give the same odds; fall, forfeit or default 6, tech fall 5, major 4, decision 3. Key bouts are the close ones that change a team's chance to win the dual the most. Tournaments: seeded by rating; 2 points per championship win and 1 per consolation win, bonus 2 for a fall, 1.5 for a tech fall, 1 for a major, and placement points 16-12-10-9-7-6-4-3.</p>
+  </section>
+
+  <!-- SEARCH -->
+  <section id="v-leaders" hidden>
+    <p class="eyebrow">Ohio high school · from the results in our database</p>
+    <h1 tabindex="-1">Stat leaders</h1>
+    <p class="lede">Most pins, fastest pins, most tech falls, most wins and the longest win streaks of the season. Forfeits never count.</p>
+    <div class="filters toolbar">
+      <div class="field"><label for="l-season">Season</label><select id="l-season"></select></div>
+      <div class="seg" role="group" aria-label="Gender" id="l-gender"></div>
+    </div>
+    <div class="pills" id="l-wts" role="group" aria-label="Weight class"></div>
+    <div class="ldr" id="l-out" style="margin-top:16px"></div>
+  </section>
+
+  <section id="v-youth" hidden>
+    <div class="evband" id="y-head">
+      <div class="evb-top">
+        <div class="hmain">
+          <div class="evb-chips" id="y-chips" hidden></div>
+          <h1 tabindex="-1" id="y-name">Youth results</h1>
+          <p class="lede" id="y-sub"></p>
+        </div>
+        <div class="evb-acts" id="y-acts" hidden></div>
+      </div>
+      <div class="evb-stats" id="y-stats" hidden></div>
+    </div>
+    <div class="whero" id="y-hero" hidden>
+      <span class="mono" id="y-mono" aria-hidden="true"></span>
+      <div class="hmain"><p class="eyebrow" id="y-eye"></p><p class="lede" id="y-lede"></p></div>
+      <div class="acts" id="y-hacts"></div>
+    </div>
+    <div class="tiles" id="y-tiles" hidden></div>
+    <div id="y-out"></div>
+  </section>
+
+  <section id="v-preview" hidden>
+    <div class="evband" id="pv-head">
+      <div class="evb-top">
+        <span class="evb-logo" id="pv-mono" aria-hidden="true" hidden></span>
+        <div class="hmain">
+          <div class="evb-chips" id="pv-chips" hidden></div>
+          <p class="eyebrow" id="pv-eyebrow">Event preview</p>
+          <h1 tabindex="-1" id="pv-name">Event preview</h1>
+          <p class="lede" id="pv-sub"></p>
+        </div>
+        <div class="evb-acts" id="pv-acts" hidden></div>
+      </div>
+    </div>
+    <div id="pv-out"></div>
+  </section>
+
+  <section id="v-search" hidden>
+    <h1 tabindex="-1">Search</h1>
+    <div class="filters"><input type="search" id="s-q" placeholder="Wrestler, school or event" autocomplete="off" aria-label="Search wrestlers, schools and events"></div>
+    <div class="stack" id="s-out"></div>
+  </section>
+
+  <!-- ACCURACY -->
+  <section id="v-accuracy" hidden>
+    <p class="eyebrow">Backtest · every state tournament we have</p>
+    <h1 tabindex="-1">How accurate is it?</h1>
+    <p class="lede">The fair test of a rating: for every season, we used only what was known the day before the state tournament to pick the winner of every state bout, then checked the picks against what happened.</p>
+    <div class="tiles" id="a-tiles"></div>
+    <div class="card acc-main">
+      <div class="card-head"><h2>State tournament picks, season by season</h2><span class="sub">Share of state bouts picked correctly</span></div>
+      <div class="acc-key" aria-hidden="true"><span><i class="k1"></i>Blend</span><span><i class="k2"></i>Rating alone</span><span><i class="k3"></i>Better season record</span><span><i class="k4"></i>Better district finish</span></div>
+      <table>
+        <thead><tr><th>Season</th><th class="num lg">Bouts</th><th>Blend</th><th>Rating alone</th><th class="num">Record</th><th class="num lg">District</th></tr></thead>
+        <tbody id="a-body"></tbody>
+      </table>
+    </div>
+    <div class="grid2 eq" style="margin-top:16px">
+      <div class="card">
+        <div class="card-head"><h2>Week-ahead picks</h2><span class="sub">In-season bouts</span></div>
+        <p class="note acc-intro">Each week's ratings picked every bout in the following 7 days.</p>
+        <table><thead><tr><th>Season</th><th class="num lg">Weeks</th><th class="num">Bouts</th><th>Correct</th></tr></thead><tbody id="a-week"></tbody></table>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>State title odds</h2><span class="sub">Simulated brackets</span></div>
+        <p class="note acc-intro">How often the wrestler we made the title favorite won, and the odds we gave the eventual champion.</p>
+        <table><thead><tr><th>Season</th><th class="num lg">Brackets</th><th>Favorite won</th><th class="num">Champion's odds</th></tr></thead><tbody id="a-odds"></tbody></table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-head"><h2>Results in the database</h2><span class="sub">Bouts per season</span></div>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>Season</th><th class="num">Tournaments</th><th class="num lg">Dual meets</th><th class="num">Sectionals</th><th class="num">Districts</th><th class="num">State</th><th class="num lg">Middle school</th></tr></thead>
+        <tbody id="a-data"></tbody>
+      </table></div>
+    </div>
+    <div class="card acc-how" style="margin-top:16px">
+      <div class="card-head"><h2>How the test works</h2></div>
+      <ul>
+        <li><strong>Blend</strong> is the rating plus each wrestler's official season record, district finish, grade and last year's state finish. Its weights are learned only from earlier seasons, with recent seasons counting most, and the rating counts for more when we have more of both wrestlers' bouts.</li>
+        <li><strong>Rating alone</strong> uses only bout results: every bout moves both wrestlers. A pin, tech fall or major counts for more than a close decision, and forfeits, injury defaults and byes don't count.</li>
+        <li><strong>Record</strong> and <strong>District</strong> are simple guesses for comparison: pick the wrestler with the better season record, or the better district finish.</li>
+        <li>Postseason bouts count a quarter more than regular-season bouts. Returning wrestlers start the next season a step up, with more uncertainty. 2019-20 had no state tournament.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer><div class="in">
+  <div><b><span class="bwf">wrestle<span>.live</span></span> <small>RANKINGS</small></b><p>Ratings and rankings built from real tournament results. Now covering Ohio high school and middle school: full seasons from 2010-11, state tournaments back to 1999-00. Youth results from events run on wrestle.live.</p><p>Records count only the bouts in our database.</p></div>
+  <div><h2>Explore</h2><ul><li><a href="#rankings">Rankings</a></li><li><a href="#rankings/p4p">Pound-for-pound</a></li><li><a href="#leaders">Stat leaders</a></li><li><a href="#teams">Teams</a></li><li><a href="#events">Events</a></li><li><a href="#matchups">Matchups</a></li><li><a href="#odds">State bracket odds</a></li></ul></div>
+  <div><h2>About</h2><ul><li><a href="#accuracy">How accurate is it?</a></li><li><a href="#home">How to read the numbers</a></li></ul><p style="margin-top:8px">Missing results or a correction? Email <a href="mailto:contactwrestlelive@gmail.com?subject=Wrestle%20Live%20Rankings">contactwrestlelive@gmail.com</a> with your tournament's final results or what needs fixed.</p></div>
+  <div class="foot-host"><p><strong>Running a tournament?</strong> wrestle.live hosts brackets, live results and registration for tournament directors.</p><a class="btn" href="https://wrestle.live/" target="_blank" rel="noopener">Host on wrestle.live<span aria-hidden="true"> ↗</span><span class="sr"> (opens in a new tab)</span></a></div>
+</div></footer>
+
+<script src="/boot.js?v=52429b4a66"></script>
+<script src="/app.js?v=49c68a8120"></script>
+</body>
+</html>
